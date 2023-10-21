@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+header {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Prompt", Verdana, Tahoma, sans-serif;
+}
+
+.custom-header {
+  background-image: url("../static/img/hdbg.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Prompt", sans-serif;
+  font-size: large;
+  position: relative; /* Add relative positioning */
+}
+
+.header-content {
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-content h1 {
+  font-size: 3rem; /* Increase the font size for the header text */
+  margin: 0; /* Remove margin for better spacing */
+}
+
+
+
+.kmitl-text {
+  color: #e35205;
+  font-family: "Inter";
+  text-align: center ;
+  font-size: 2rem; /* Adjust font size for the KMITL text */
+  margin-top: 15px; 
+ 
+  -webkit-text-stroke: 0.5px white; 
+}
+
+
+body {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+ 
+  background-blend-mode: overlay;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Button background color */
+  color: #fff; /* Text color */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow on hover */
+}
+
+.custom-input {
+  border: none;
+  background-color: #f2f2f2; /* Input background color */
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-input:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.custom-button:active {
+  transform: scale(0.95); /* Shrink the button when it's pressed */
+  box-shadow: 1px 1px 2px #888888; /* Smaller shadow when pressed */
+}
+
+
+
+
+
+
+/* Style for the sidebar on the right */
+.sidebar {
+  width: 150px; /* Set the width of the sidebar */
+  background-color: #333; /* Background color for the sidebar */
+  position: fixed;
+  top: 0;
+  right: -150px;
+  transition: width 0.3s ease; 
+  height: 100%; /* Make it cover the full height */
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+}
+
+/* Style for the navigation items in the sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .nav-item {
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+/* Style for the navigation item links */
+.sidebar .nav-item a {
+  text-decoration: none;
+  color: white; /* Color of the link text */
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the images within the navigation items */
+.sidebar .nav-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Add hover effect to the navigation items 
+.sidebar .nav-item:hover {
+  transform: translateY(-3px);
+}  
+*/
+
+/* Add hover effect to the navigation item links */
+.sidebar .nav-item a:hover {
+  color: #f2f2f2;
+  
+}
+.sidebar:hover {
+  width: 150px; /* Expand the width on hover */
+
+}
+
+/* Style for links inside the sidebar */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: block;
+  transition: background-color 0.3s ease; /* Smooth transition for link background color */
+}
+
+/* Hover effect for links */
+.sidebar a:hover {
+  background-color: #555; /* Change background color on hover */
+}
+
+#showSidebarButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 1;
+}
+.sidebar.show {
+  width: 150px;
+  right: 0;
+}
+.sidebar-content {
+  padding: 20px;
+  color: white;
+}
+
+.sidebar:hover {
+  right: 0; /* Expand on hover */
+}
+
