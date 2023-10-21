@@ -1,0 +1,124 @@
+html {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.pre_img {
+  height: 600px;
+  width: 600px;
+  /* background-color: white; */
+}
+#resultImage {
+  width: auto; /* กำหนดให้ความกว้างของภาพปรับอัตโนมัติตามขนาดจริงของภาพ */
+  height: auto; /* กำหนดให้ความสูงของภาพปรับอัตโนมัติตามขนาดจริงของภาพ */
+  max-width: 600px; /* กำหนดให้ความกว้างของภาพไม่เกิน 100% ของพื้นที่ที่พื้นที่ .pre_img มี */
+  max-height: 600px; /* กำหนดให้ความสูงของภาพไม่เกิน 100% ของพื้นที่ที่พื้นที่ .pre_img มี */
+}
+
+input[type="file"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 40px 40px;
+  /* display: none; */
+}
+
+#pre {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px 40px;
+}
+
+p {
+  margin: 50px;
+  font-size: 72px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+header {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Prompt", Verdana, Tahoma, sans-serif;
+}
+
+.custom-header {
+  background-image: url("../static/img/hdbg.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Prompt", sans-serif; /* Use the Inter font */
+  font-size: large;
+}
+
+.header-content {
+  font-weight: bold;
+}
+.kmitl-text {
+  color: #e35205;
+  font-family: "Inter";
+  text-align: right;
+}
+
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #e35205;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.nav-item {
+  margin: 0 90px;
+  display: flex;
+  align-items: center;
+}
+
+li.nav-item img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+li.nav-item a:hover {
+  background-color: #ff7f29;
+  color: white;
+  display: flex;
+  border-radius: 10%;
+}
