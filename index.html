@@ -21,19 +21,20 @@
     <form action="/detect" method="post" enctype="multipart/form-data">
       <input class="custom-input" type="file" name="image" accept="image/*" required />
       <input class="custom-input" type="file" name="xml_file" accept=".xml" required />
-      <form action="page2.html" method="GET">
+    <form action="page2.html" method="GET">
 
         
         <button class="custom-button" type="submit">Submit</button>
       </form>
     </form>
-    <button id="showSidebarButton">Show Sidebar</button>
+    <button id="showSidebarButton">. . .</button>
     <button id="myButton">Click Me</button>
     <div class="sidebar" id="sidebar">
-  
+      <script src="../static/js/script.js"></script>
+
       <ul>
           <li class="nav-item">
-              <a href="#home">
+              <a href="../static/index2.html">
                   <img src="../static/img/Home.png" alt="Home" />
                   <span>Home</span>
               </a>
@@ -56,20 +57,27 @@
 
 <script>
   // JavaScript to handle showing/hiding the sidebar
+      const showSidebarButton = document.getElementById("showSidebarButton");
+      const sidebar = document.getElementById("sidebar");
 
-const showSidebarButton = document.getElementById("showSidebarButton");
-const sidebar = document.getElementById("sidebar");
+      showSidebarButton.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        showSidebarButton.style.display = "none"; // Hide the button
+      });
 
-showSidebarButton.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
-});
+      document.getElementById("myButton").addEventListener("click", function() {
+        window.location.href = "../static/page2.html";
+      });
 
-  document.getElementById("myButton").addEventListener("click", function() {
-     
-    window.location.href = "../static/page2.html"  
-    
-  });
+      // Event listener to close the sidebar when clicking outside
+      document.body.addEventListener("click", (event) => {
+        if (sidebar.classList.contains("show") && event.target !== sidebar && event.target !== showSidebarButton) {
+          sidebar.classList.remove("show");
+          showSidebarButton.style.display = "block"; // Show the button
+        }
+      });
 
+      
 </script>
     
   </body>
