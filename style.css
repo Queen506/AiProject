@@ -133,6 +133,8 @@ body {
   height: 100%; /* Make it cover the full height */
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
   overflow-x: hidden;
+  transition: width 0.3s ease, right, 0.3s ease;
+  
 }
 
 /* Style for the navigation items in the sidebar */
@@ -197,16 +199,27 @@ body {
   right: 20px;
   background-color: #333;
   color: white;
-  border: none;
+  border: 2px solid grey;
   cursor: pointer;
   padding: 10px;
   font-size: 20px;
-  z-index: 1;
+  transition: box-shadow 0.3s ease; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom, #222020, #363434); 
 }
+
+
+#showSidebarButton:active {
+  box-shadow: inset 3px 3px 4px black; /* Add a pressed effect */
+}
+
 .sidebar.show {
   width: 150px;
   right: 0;
 }
+
+
+
 .sidebar-content {
   padding: 20px;
   color: white;
