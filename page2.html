@@ -23,12 +23,12 @@
    
 
 
-    <button id="showSidebarButton">Show Sidebar</button>
+    <button id="showSidebarButton">. . .</button>
     <div class="sidebar" id="sidebar">
   
       <ul>
           <li class="nav-item">
-              <a href="#home">
+            <a href="../static/index2.html">
                   <img src="../static/img/Home.png" alt="Home" />
                   <span>Home</span>
               </a>
@@ -51,16 +51,22 @@
 
 <script>
   // JavaScript to handle showing/hiding the sidebar
+      const showSidebarButton = document.getElementById("showSidebarButton");
+      const sidebar = document.getElementById("sidebar");
 
-const showSidebarButton = document.getElementById("showSidebarButton");
-const sidebar = document.getElementById("sidebar");
+      showSidebarButton.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        showSidebarButton.style.display = "none"; // Hide the button
+      });
 
-showSidebarButton.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
-});
-
- 
-
+     
+      // Event listener to close the sidebar when clicking outside
+      document.body.addEventListener("click", (event) => {
+        if (sidebar.classList.contains("show") && event.target !== sidebar && event.target !== showSidebarButton) {
+          sidebar.classList.remove("show");
+          showSidebarButton.style.display = "block"; // Show the button
+        }
+      });
 </script>
     
   </body>
