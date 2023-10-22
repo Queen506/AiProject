@@ -229,3 +229,68 @@ body {
   right: 0; /* Expand on hover */
 }
 
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  height: 100vh;
+}
+
+.restaurant {
+  display: inline-block; 
+}
+
+.table-row {
+  display: flex;
+}
+
+.table {
+  width: 100px;
+  height: 100px;
+  background-color: #964B00; /* Brown color for the table */
+  margin: 5px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Prompt", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  /*width: 10vw; /* Responsive width based on viewport width (adjust as needed) */
+  /* height: 10vw; /* Responsive height based on viewport width (adjust as needed) */
+}
+
+.table:hover {
+  transform: scale(1.05); /* Slightly enlarge the table on hover */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Increase the shadow on hover */
+  background-color: #7A3C00; /* Change background color on hover */
+}
+
+.table:active {
+  transform: scale(0.95); /* Slightly shrink the table when clicked */
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Reduce shadow when clicked */
+  background-color: #964B00; /* Restore original background color */
+}
+
+.square-outside {
+  width: 10vw; /* Responsive width based on viewport width (adjust as needed) */
+  height: 10vw; /* Responsive height based on viewport width (adjust as needed) */
+  background-color: #2f2c29;
+  border-radius: 10px; /* Rounded corners */
+  opacity: 66%;
+  position: absolute;
+  height: 40%;
+  top: 60%;
+  right: 7%; /* Adjust the distance from the right side (you can use percentages or pixels) */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
