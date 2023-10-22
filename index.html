@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Image for Object Detection</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+   
+  </head>
+  <body>
+    <header class="custom-header">
+      <div class="header-content">
+        <h1>หาโต๊ะว่างในโรงอาหาร</h1>
+        <p class="kmitl-text">KMITL</p>
+      </div>
+    </header>
+    <h4 style="font-family: 'Prompt'; text-align: right">
+      อัปเดตล่าสุด 12 : 05 น.
+    </h4>
+    <h1>Upload Image for Object Detection</h1>
+    <form action="/detect" method="post" enctype="multipart/form-data">
+      <input class="custom-input" type="file" name="image" accept="image/*" required />
+      <input class="custom-input" type="file" name="xml_file" accept=".xml" required />
+      <form action="page2.html" method="GET">
+
+        
+        <button class="custom-button" type="submit">Submit</button>
+      </form>
+    </form>
+    <button id="showSidebarButton">Show Sidebar</button>
+    <button id="myButton">Click Me</button>
+    <div class="sidebar" id="sidebar">
+  
+      <ul>
+          <li class="nav-item">
+              <a href="#home">
+                  <img src="../static/img/Home.png" alt="Home" />
+                  <span>Home</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="#search">
+                  <img src="../static/img/search.png" alt="Search" />
+                  <span>Search</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="#setting">
+                  <img src="../static/img/Setting_line.png" alt="Setting" />
+                  <span>Setting</span>
+              </a>
+          </li>
+      </ul>
+
+</div>
+
+<script>
+  // JavaScript to handle showing/hiding the sidebar
+
+const showSidebarButton = document.getElementById("showSidebarButton");
+const sidebar = document.getElementById("sidebar");
+
+showSidebarButton.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
+});
+
+  document.getElementById("myButton").addEventListener("click", function() {
+     
+    window.location.href = "../static/page2.html"  
+    
+  });
+
+</script>
+    
+  </body>
+  
+  
+</html>
