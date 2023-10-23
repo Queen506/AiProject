@@ -117,8 +117,26 @@ body {
   box-shadow: 1px 1px 2px #888888; /* Smaller shadow when pressed */
 }
 
+.myButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #242824; /* Button background color */
+  color: #fff; /* Text color */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: box-shadow 0.3s ease-in-out;
+}
 
+.myButton:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow on hover */
+}
 
+.myButton:active {
+  transform: scale(0.95); /* Shrink the button when it's pressed */
+  box-shadow: 1px 1px 2px #888888; /* Smaller shadow when pressed */
+}
 
 
 
@@ -146,6 +164,7 @@ body {
 .sidebar .nav-item {
   padding: 10px;
   transition: transform 0.2s;
+
 }
 
 /* Style for the navigation item links */
@@ -161,6 +180,7 @@ body {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+ 
 }
 
 /* Add hover effect to the navigation items 
@@ -291,6 +311,6 @@ body {
   top: 60%;
   right: 7%; /* Adjust the distance from the right side (you can use percentages or pixels) */
   transform: translateY(-50%);
-  z-index: 1;
+/*  z-index: 1; */
 }
 
